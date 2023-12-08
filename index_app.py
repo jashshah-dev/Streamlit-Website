@@ -150,10 +150,10 @@ def display_dashboard():
 
         # Merge with day_counts to fill NaN values with 0
         day_counts_df = pd.merge(all_days, day_counts, left_on='Day', right_index=True, how='left').fillna(0)
-        print(day_counts_df)
+        
 
         # Create a line plot with shaded area
-        fig = px.area(day_counts_df, x='Day', y='Admission Day', labels={'x': 'Day', 'y': 'Number of Admissions'})
+        fig = px.area(day_counts_df, x='Day', y='Count', labels={'x': 'Day', 'y': 'Number of Admissions'})
 
         # Display the plot using Streamlit
         st.plotly_chart(fig)
