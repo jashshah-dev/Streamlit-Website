@@ -153,7 +153,7 @@ def display_dashboard():
         
 
         # Create a line plot with shaded area
-        fig = px.area(day_counts_df, x='Day', y='Count', labels={'x': 'Day', 'y': 'Number of Admissions'})
+        fig = px.area(day_counts_df, x='Day', y='count', labels={'x': 'Day', 'y': 'Number of Admissions'})
 
         # Display the plot using Streamlit
         st.plotly_chart(fig)
