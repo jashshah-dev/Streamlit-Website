@@ -8,6 +8,7 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
+pd.set_option('mode.use_inf_as_null', True)
 
 
 #Set page title and favicon
